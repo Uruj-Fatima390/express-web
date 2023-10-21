@@ -2,7 +2,7 @@ const express = require('express');
 const path=require('path')
 const hbs=require('hbs');
 const app=express();
-const port=8000;
+const port=process.env.PORT || 8000;//process.env.PORT its for heroku deployement because it runs on any port
 
 const staticPath=path.join(__dirname,'../public') // '..'-- it means express tak aagye
 const template_path=path.join(__dirname,'../templates/views');
